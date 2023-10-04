@@ -87,28 +87,26 @@
         color: #000000;
       }
       /* Initially hide the button with CSS */
-      #myButton {
+      #myButton1 {
+        display: none;
+      }
+      /* Initially hide the button with CSS */
+      #myButton2 {
         display: none;
       }
     </style>
   </head>
   <body>
     <div class="video-container">
-      <video
-        class="video"
-        controls
-        width="100%"
-        height="100%"
-        id="autoplayVideo"
-      >
+      <video class="video" width="100%" height="100%" id="autoplayVideo">
         <source src="01 Intro.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div class="play-button-overlay" id="playButtonOverlay">
         <div class="play-button" id="playButton"></div>
       </div>
-      <a id="myButton" class="overlay-link-left" href="ecstacy.html"></a
-      ><a id="myButton" class="overlay-link-right" href="downcast.html"></a>
+      <a id="myButton1" class="overlay-link-left" href="ecstacy.html"></a
+      ><a id="myButton2" class="overlay-link-right" href="downcast.html"></a>
     </div>
 
     <script>
@@ -126,12 +124,19 @@
         playButtonOverlay.style.display = "none"; // Hide the overlay when the video starts
       });
       // Function to show the button after 20 seconds
-      function showButton() {
-        document.getElementById("myButton").style.display = "block";
+      function showButton1() {
+        document.getElementById("myButton1").style.display = "block";
       }
 
       // Set a timeout to call the showButton function after 20 seconds
-      setTimeout(showButton, 20000); // 20,000 milliseconds = 20 seconds
+      setTimeout(showButton1, 96000); // 20,000 milliseconds = 20 seconds
+      // Function to show the button after 20 seconds
+      function showButton2() {
+        document.getElementById("myButton2").style.display = "block";
+      }
+
+      // Set a timeout to call the showButton function after 20 seconds
+      setTimeout(showButton2, 96000); // 20,000 milliseconds = 20 seconds
     </script>
   </body>
 </html>
